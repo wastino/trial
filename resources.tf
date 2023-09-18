@@ -126,6 +126,6 @@ resource "helm_release" "blackbox_exporter" {
 }
 
 data "http" "blackbox_operator_values" {
-  url = "https://raw.githubusercontent.com/yourusername/your-repo/main/blackbox_operator_values.yaml"
+  url = "https://github.com/wastino/trial/blob/main/blackbox.yaml"
 }
 
