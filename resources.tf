@@ -118,7 +118,7 @@ resource "helm_release" "blackbox_exporter" {
   repository = "https://prometheus-community.github.io/helm-charts"
   chart      = "prometheus-blackbox-exporter"
   version    = "8.0.0"  
-  namespace  = "prometheus"
+  namespace  = "monitoring"
   
   values = [
     data.http.blackbox_operator_values.body,  
@@ -126,6 +126,6 @@ resource "helm_release" "blackbox_exporter" {
 }
 
 data "http" "blackbox_operator_values" {
-  url = "https://github.com/wastino/trial/blob/main/blackbox.yaml"
+  url = "https://github.com/wastino/trial/blob/main/blackbox_values.yaml"
 }
 
